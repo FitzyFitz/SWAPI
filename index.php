@@ -19,9 +19,17 @@
                 $resultadoVeiculo = json_decode(file_get_contents($urlVeiculo));
                 //var_dump($resultadoVeiculo);
 
+                $qtdVeiculos = 0;
+
                 foreach ($personagem->vehicles as $veiculo) {
                     echo "Veículo: " . $veiculo . "<br>";
+                    $qtdVeiculos++;
                 }
+
+                if($qtdVeiculos > 0){
+                    echo "Quantidade: ". $qtdVeiculos;
+                }
+                
 
                 echo "<hr>";
             }
